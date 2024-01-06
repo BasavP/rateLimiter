@@ -31,6 +31,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator:3.2.1'
 	implementation 'com.github.vladimir-bukhtoyarov:bucket4j-caffeine:7.6.0'
 	implementation 'com.giffing.bucket4j.spring.boot.starter:bucket4j-spring-boot-starter-context:0.10.1'
+	implementation group: 'org.redisson', name: 'redisson-spring-boot-starter', version: '3.17.7'
+	implementation group: 'com.giffing.bucket4j.spring.boot.starter', name: 'bucket4j-spring-boot-starter', version: '0.6.0'
+
+
 }
 
 tasks.named('test') {
