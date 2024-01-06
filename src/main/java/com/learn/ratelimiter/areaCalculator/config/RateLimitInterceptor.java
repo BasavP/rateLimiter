@@ -25,6 +25,7 @@ public class RateLimitInterceptor implements HandlerInterceptor{
             response.setStatus(429);
             response.addHeader("message", "too many requests");
             response.setContentType("application/json");
+            response.addHeader("remaining-tokens", String.valueOf(bucket.getAvailableTokens()));
             log.info("too many requests! rate limit exceeded");
             return false;
         }
