@@ -1,5 +1,5 @@
 Reference : https://www.baeldung.com/spring-bucket4j
-
+https://lakshyajit165.medium.com/rate-limiting-in-rest-apis-using-springboot-and-redis-135cd5cde754
 
 the buckets will be stored in redis cache
 
