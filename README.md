@@ -1,6 +1,10 @@
 Reference : https://www.baeldung.com/spring-bucket4j
 
 
+the buckets will be stored in redis cache
+
+each user id will have different bucket 
+
 The application has a rate limit of 1 request per 30 seconds
 
 
@@ -16,6 +20,8 @@ http://localhost:8080/rectangle2
 
 
 Request Body 
+
+header : x-user-id 
 
 {
     "length":2,
