@@ -22,22 +22,22 @@ import org.springframework.web.bind.annotation.RestController;
 public class areaCalculatorController {
 
 //    @Autowired
-    private final Bucket bucket;
+
 
 
     /*
     * POST endpoint to calculate area of a rectangle which takes a pojo as input
     * */
-    @PostMapping("/rectangle")
+  /*  @PostMapping("/rectangle")
 
     public BaseResponse<Double> calculateArea(@RequestBody Rectangle rectangle) {
         if (bucket.tryConsume(1)) {
             double v =  rectangle.getLength() * rectangle.getWidth();
             return new BaseResponse(v, null, 200);
- /*           BaseResponse<Double> doubleBaseResponse = new BaseResponse<>();
+ *//*           BaseResponse<Double> doubleBaseResponse = new BaseResponse<>();
             doubleBaseResponse.setPayload(v);
             doubleBaseResponse.setHttpStatusCode(200);
-            return doubleBaseResponse;*/
+            return doubleBaseResponse;*//*
         } else {
             log.error("Too many requests");
             return  new BaseResponse<>(ErrorResponse.builder()
@@ -46,7 +46,7 @@ public class areaCalculatorController {
                     .message("Too many requests")
                     .build(), null, 429);
         }
-    }
+    }*/
 
 
     //a duplicate of the above method without the if conditions to test the rate limiter
